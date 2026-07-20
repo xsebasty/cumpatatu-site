@@ -1,0 +1,268 @@
+/* Cumpătatu — stil replicat din DESIGN_SYSTEM.md v1.1 al aplicației.
+   Tokens identici cu aplicația: site-ul arată ca aplicația.
+   Zero tracking, zero fonturi externe (font system), zero JS. */
+
+:root {
+  /* [base] */
+  --bg-cream: #F3F0E8;
+  --surface: #FFFFFF;
+  --surface-soft: #FBFAF6;
+  --border: #E4DECF;
+  --border-card: #EBE5D7;
+  --text-primary: #1F1D1A;
+  --text-secondary: #8C857A;
+  --text-muted: #B0A899;
+  /* [verde — brand] */
+  --green: #2E6A4C;
+  --green-pressed: #255A40;
+  --green-soft: #E1EDE4;
+  /* [coral — doar bucurie] */
+  --coral: #E25C2D;
+  --coral-bg-soft: #FDEDE7;
+  --coral-text: #8C3418;
+  /* [semantic] */
+  --attention: #B5852B;
+  --good: #2E7D46;
+  /* radius + spacing (secțiunea 4) */
+  --radius-card: 16px;
+  --radius-buton: 16px;
+  --radius-chip: 999px;
+  --pad-card: 16px;
+  --gap-carduri: 11px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-cream);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.invelis {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.nav-rand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sigla {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.sigla .punct { color: var(--green); }
+.nav-linkuri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+.nav-linkuri a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 4px;
+}
+.nav-linkuri a:hover { color: var(--green); }
+
+/* ===== HERO ===== */
+.erou {
+  text-align: center;
+  padding: 64px 0 48px;
+}
+.cerc-personaj {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 34px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.erou h1 {
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.erou .subtitlu {
+  margin: 16px auto 0;
+  max-width: 620px;
+  color: var(--text-secondary);
+  font-size: clamp(16px, 2.5vw, 19px);
+}
+.insigna-curand {
+  display: inline-block;
+  margin-top: 24px;
+  background: var(--green-soft);
+  color: var(--green);
+  border-radius: var(--radius-chip);
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===== SECȚIUNI ===== */
+.sectiune { padding: 48px 0; }
+.sectiune h2 {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.sectiune .introducere {
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+/* ===== FUNCȚII (grid de carduri) ===== */
+.grila-functii {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap-carduri);
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: var(--pad-card);
+}
+.card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.card h3 .glif { margin-right: 6px; }
+.card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ===== CAPTURI (sloturi pregătite; secțiunea stă ascunsă până vin pozele
+   reale de la TEST-REAL — se activează scoțând atributul hidden) ===== */
+.grila-capturi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--gap-carduri);
+}
+.slot-captura {
+  background: var(--surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  aspect-ratio: 9 / 19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  overflow: hidden;
+}
+.slot-captura img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== ÎNTREBĂRI ===== */
+.intrebare {
+  background: var(--surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
+  padding: var(--pad-card);
+  margin-bottom: var(--gap-carduri);
+}
+.intrebare summary {
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.intrebare summary::after {
+  content: "+";
+  color: var(--green);
+  font-size: 20px;
+  line-height: 1;
+}
+.intrebare[open] summary::after { content: "–"; }
+.intrebare p {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ===== CONFIDENȚIALITATE + CONTACT ===== */
+.card-lat { max-width: 620px; }
+.card-lat p { color: var(--text-secondary); font-size: 15px; }
+.card-lat p + p { margin-top: 10px; }
+
+.legatura {
+  color: var(--green);
+  font-weight: 500;
+  text-decoration: none;
+}
+.legatura:hover { text-decoration: underline; }
+
+.buton-verde {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--green);
+  color: #FFFFFF;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-buton);
+  padding: 13px 26px;
+}
+.buton-verde:hover { background: var(--green-pressed); }
+
+/* ===== FOOTER ===== */
+.subsol {
+  border-top: 1px solid var(--border);
+  padding: 24px 0 40px;
+  color: var(--text-muted);
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  justify-content: space-between;
+}
+.subsol a { color: var(--text-secondary); text-decoration: none; }
+.subsol a:hover { color: var(--green); }
+
+/* ===== pagina de confidențialitate ===== */
+.politica { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+.politica h1 { font-size: 28px; font-weight: 500; margin-bottom: 6px; }
+.politica .actualizata { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+.politica h2 { font-size: 20px; font-weight: 500; margin: 28px 0 8px; }
+.politica h3 { font-size: 16.5px; font-weight: 500; margin: 18px 0 6px; }
+.politica p, .politica li { color: var(--text-secondary); font-size: 15px; }
+.politica ul { padding-left: 22px; margin: 8px 0; }
+.politica .separator {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 36px 0;
+}
