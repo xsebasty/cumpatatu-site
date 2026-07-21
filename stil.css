@@ -155,12 +155,11 @@ body {
   padding-top: 64px;
   padding-bottom: 56px;
 }
-.bon-erou {
-  width: 150px;
-  height: 190px;
+.mascota-erou {
+  width: 220px;
+  height: 220px;
   margin: 0 auto 24px;
   display: block;
-  transform: rotate(-2.5deg);
   filter: drop-shadow(0 10px 22px rgba(31, 29, 26, 0.13));
 }
 .erou h1 {
