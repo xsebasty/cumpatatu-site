@@ -10,6 +10,15 @@
 </head>
 <body>
 
+<!-- modelul zimților de bon, refolosit de toate separatoarele -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="zimti" width="14" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L14 0 L7 8 Z" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+</svg>
+
 <nav class="nav">
   <div class="nav-rand">
     <a class="sigla" href="#sus">Cumpătatu<span class="punct">.</span></a>
@@ -23,70 +32,105 @@
 </nav>
 
 <header class="erou invelis" id="sus">
-  <!-- locul chipului personajului (ilustrațiile vin la Nivelul 2) -->
-  <div class="cerc-personaj">lei</div>
+  <!-- bonul stilizat; chipul personajului vine DOAR de la ilustrator (Nivel 2) -->
+  <svg class="bon-erou" viewBox="0 0 150 190" role="img" aria-label="Un bon de casă stilizat">
+    <path fill="#FFFFFF" d="M20 20 L25 14 L30 20 L35 14 L40 20 L45 14 L50 20 L55 14 L60 20 L65 14 L70 20 L75 14 L80 20 L85 14 L90 20 L95 14 L100 20 L105 14 L110 20 L115 14 L120 20 L125 14 L130 20 L130 170 L125 176 L120 170 L115 176 L110 170 L105 176 L100 170 L95 176 L90 170 L85 176 L80 170 L75 176 L70 170 L65 176 L60 170 L55 176 L50 170 L45 176 L40 170 L35 176 L30 170 L25 176 L20 170 Z"/>
+    <rect x="34" y="38" width="60" height="7" rx="3.5" fill="#EBE5D7"/>
+    <rect x="34" y="56" width="82" height="7" rx="3.5" fill="#EBE5D7"/>
+    <rect x="34" y="74" width="70" height="7" rx="3.5" fill="#EBE5D7"/>
+    <rect x="34" y="92" width="78" height="7" rx="3.5" fill="#EBE5D7"/>
+    <line x1="34" y1="116" x2="116" y2="116" stroke="#E4DECF" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round"/>
+    <rect x="34" y="132" width="38" height="8" rx="4" fill="#B0A899"/>
+    <rect x="84" y="130" width="32" height="12" rx="6" fill="#E1EDE4"/>
+    <rect x="90" y="134" width="20" height="4" rx="2" fill="#2E6A4C"/>
+  </svg>
   <h1>Tu pozezi bonul.<br>Eu țin socoteala.</h1>
   <p class="subtitlu">Cumpătatu citește bonul, împarte cheltuielile pe categorii
     și-ți arată unde se duc banii. În română, pentru acasă și pentru diaspora.</p>
   <span class="insigna-curand">În curând pe iPhone și Android</span>
 </header>
 
+<svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
+
 <main>
-  <section class="sectiune invelis" id="functii">
-    <h2>Ce știu să fac</h2>
-    <p class="introducere">Pe scurt: tu trăiești, eu socotesc.</p>
-    <div class="grila-functii">
-      <div class="card">
-        <h3><span class="glif">📷</span>Scanare cu AI</h3>
-        <p>Pozezi bonul, restul e treaba mea: magazin, dată, total și produsele,
-          gata împărțite pe categorii. Citesc bonuri în orice limbă — diaspora
-          e acasă la mine.</p>
+  <section class="sectiune invelis" id="cum-functioneaza">
+    <h2>Cum funcționează</h2>
+    <div class="grila-pasi">
+      <div class="pas">
+        <span class="pas-numar">1</span>
+        <h3>Pozezi bonul.</h3>
+        <p>Restul e treaba mea: magazin, dată, total și produsele.</p>
       </div>
-      <div class="card">
-        <h3><span class="glif">🧾</span>Un bon, mai multe categorii</h3>
-        <p>Bonul de la hipermarket nu e doar „mâncare”: îl împart corect —
-          alimente, detergenți, jucării. Asta n-o găsești în altă parte.</p>
+      <div class="pas">
+        <span class="pas-numar">2</span>
+        <h3>Eu îl citesc și-l împart pe categorii.</h3>
       </div>
-      <div class="card">
-        <h3><span class="glif">🛡️</span>Seiful de garanții</h3>
-        <p>Bonurile de garanție le pun bine în seif și-ți dau de veste înainte
-          să expire. Bonurile termice se șterg fizic — ale tale nu.</p>
-      </div>
-      <div class="card">
-        <h3><span class="glif">🇪🇺</span>În siguranță, în Europa</h3>
-        <p>Datele tale stau în cloud, în Uniunea Europeană (Irlanda). Schimbi
-          telefonul? Te loghezi și totul e la locul lui. Ștergere completă
-          oricând.</p>
-      </div>
-      <div class="card">
-        <h3><span class="glif">💶</span>Orice monedă</h3>
-        <p>RON, EUR, GBP... Țin totalurile separate pe fiecare monedă, plus un
-          total combinat orientativ, la cursul BNR.</p>
-      </div>
-      <div class="card">
-        <h3><span class="glif">🌿</span>Buget lunar prietenos</h3>
-        <p>Îmi spui cât vrei să cheltui într-o lună și-ți arăt cum stai.
-          Îți spun — nu te cert.</p>
-      </div>
-      <div class="card">
-        <h3><span class="glif">📊</span>Export .xlsx</h3>
-        <p>Pentru cine își vrea tabelul lui: un buton și ai toate cheltuielile
-          în .xlsx, frumos așezate.</p>
+      <div class="pas">
+        <span class="pas-numar">3</span>
+        <h3>Tu vezi unde se duc banii.</h3>
       </div>
     </div>
   </section>
 
-  <!-- CAPTURI: sloturile sunt pregătite; secțiunea se activează (se scoate
-       atributul hidden) când vin capturile reale de pe telefon. -->
-  <section class="sectiune invelis" id="capturi" hidden>
-    <h2>Așa arăt</h2>
-    <div class="grila-capturi">
-      <div class="slot-captura"><!-- <img src="capturi/dashboard.png" alt="Dashboard Cumpătatu"> -->Dashboard</div>
-      <div class="slot-captura"><!-- <img src="capturi/confirmare.png" alt="Confirmarea unui bon scanat"> -->Confirmare bon</div>
-      <div class="slot-captura"><!-- <img src="capturi/seif.png" alt="Seiful de garanții"> -->Seiful de garanții</div>
-      <div class="slot-captura"><!-- <img src="capturi/onboarding.png" alt="Primul ecran Cumpătatu"> -->Bun venit</div>
+  <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
+
+  <section class="sectiune invelis" id="functii">
+    <h2>Ce știu să fac</h2>
+    <p class="introducere">Pe scurt: tu cheltui, eu socotesc.</p>
+    <div class="grila-diferentiatori">
+      <div class="card card-mare">
+        <h3><svg class="pictograma" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v16.5l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5V3z" fill="none" stroke="#2E6A4C" stroke-width="2" stroke-linejoin="round"/><path d="M10 8h4M10 12h4" stroke="#2E6A4C" stroke-width="2" stroke-linecap="round"/></svg>Un bon, mai multe categorii</h3>
+        <p>Bonul de la hipermarket nu e doar „mâncare”: îl împart corect —
+          alimente, detergenți, jucării. Asta n-o găsești în altă parte.</p>
+      </div>
+      <div class="card card-mare">
+        <h3><svg class="pictograma" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" fill="none" stroke="#2E6A4C" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5l2 2 4-4" fill="none" stroke="#2E6A4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Seiful de garanții</h3>
+        <p>Bonurile de garanție le pun bine în seif și-ți dau de veste înainte
+          să expire. Bonurile termice se șterg fizic — ale tale nu.</p>
+      </div>
+      <div class="card card-mare">
+        <h3><svg class="pictograma" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="10.5" width="13" height="9" rx="2" fill="none" stroke="#2E6A4C" stroke-width="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="#2E6A4C" stroke-width="2" stroke-linecap="round"/></svg>În siguranță, în Europa</h3>
+        <p>Datele tale stau în cloud, în Uniunea Europeană (Irlanda). Schimbi
+          telefonul? Te loghezi și totul e la locul lui. Ștergere completă
+          oricând.</p>
+      </div>
+    </div>
+    <div class="pe-deasupra">
+      <h3>Și pe deasupra:</h3>
+      <ul class="lista-compacta">
+        <li><strong>Orice monedă</strong> — RON, EUR, GBP... totaluri separate pe fiecare monedă, plus un total combinat orientativ, la cursul BNR.</li>
+        <li><strong>Buget lunar prietenos</strong> — îmi spui cât vrei să cheltui într-o lună și-ți arăt cum stai. Îți spun — nu te cert.</li>
+        <li><strong>Export .xlsx</strong> — un buton și ai toate cheltuielile în .xlsx, frumos așezate.</li>
+      </ul>
     </div>
   </section>
+
+  <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
+
+  <section class="banner-diaspora" id="diaspora">
+    <div class="invelis">
+      <span class="eticheta-diaspora">Pentru diaspora</span>
+      <p class="mesaj-diaspora">Citesc bonuri în orice limbă — diaspora e acasă la mine.</p>
+      <p class="submesaj-diaspora">Din Italia, Spania, UK, Germania — bonul tău e citit ca acasă.</p>
+    </div>
+  </section>
+
+  <!-- CAPTURI: sloturile sunt pregătite; blocul se activează (se scoate
+       atributul hidden) când vin capturile reale de pe telefon. -->
+  <div id="bloc-capturi" hidden>
+    <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
+    <section class="sectiune invelis" id="capturi">
+      <h2>Așa arăt</h2>
+      <div class="grila-capturi">
+        <div class="slot-captura"><!-- <img src="capturi/dashboard.png" alt="Dashboard Cumpătatu"> -->Dashboard</div>
+        <div class="slot-captura"><!-- <img src="capturi/confirmare.png" alt="Confirmarea unui bon scanat"> -->Confirmare bon</div>
+        <div class="slot-captura"><!-- <img src="capturi/seif.png" alt="Seiful de garanții"> -->Seiful de garanții</div>
+        <div class="slot-captura"><!-- <img src="capturi/onboarding.png" alt="Primul ecran Cumpătatu"> -->Bun venit</div>
+      </div>
+    </section>
+  </div>
+
+  <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
 
   <section class="sectiune invelis" id="intrebari">
     <h2>Întrebări frecvente</h2>
@@ -123,6 +167,8 @@
     </details>
   </section>
 
+  <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
+
   <section class="sectiune invelis" id="confidentialitate">
     <h2>Confidențialitate</h2>
     <div class="card-lat">
@@ -132,6 +178,8 @@
       <p><a class="legatura" href="privacy.html">Citește politica întreagă →</a></p>
     </div>
   </section>
+
+  <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
 
   <section class="sectiune invelis" id="contact">
     <h2>Contact</h2>

@@ -1,6 +1,57 @@
 /* Cumpătatu — stil replicat din DESIGN_SYSTEM.md v1.1 al aplicației.
    Tokens identici cu aplicația: site-ul arată ca aplicația.
-   Zero tracking, zero fonturi externe (font system), zero JS. */
+   Zero tracking, zero JS. Font Nunito self-hosted (fonturi/, licența OFL) —
+   niciun request către terți. */
+
+/* ===== FONT (self-hosted; latin + latin-ext pentru diacritice) ===== */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-ext-500-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonturi/nunito-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 :root {
   /* [base] */
@@ -23,12 +74,14 @@
   /* [semantic] */
   --attention: #B5852B;
   --good: #2E7D46;
-  /* radius + spacing (secțiunea 4) */
-  --radius-card: 16px;
-  --radius-buton: 16px;
+  /* radius + spacing (secțiunea 4; colțuri mai generoase pe site — adenda E5b/M6) */
+  --radius-card: 20px;
+  --radius-buton: 18px;
   --radius-chip: 999px;
-  --pad-card: 16px;
-  --gap-carduri: 11px;
+  --pad-card: 20px;
+  --gap-carduri: 14px;
+  /* umbra de ridicare (M6) */
+  --umbra-hover: 0 10px 24px rgba(31, 29, 26, 0.08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,7 +91,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg-cream);
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.55;
@@ -48,6 +101,13 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* ===== SEPARATORUL-BON (M2): marginea zimțată, la fiecare graniță ===== */
+.separator-bon {
+  display: block;
+  width: 100%;
+  height: 18px;
 }
 
 /* ===== NAV ===== */
@@ -70,7 +130,7 @@ body {
 }
 .sigla {
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--text-primary);
   text-decoration: none;
 }
@@ -91,24 +151,19 @@ body {
 /* ===== HERO ===== */
 .erou {
   text-align: center;
-  padding: 64px 0 48px;
+  padding: 64px 0 56px;
 }
-.cerc-personaj {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: var(--green-soft);
-  color: var(--green);
-  font-size: 34px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 28px;
+.bon-erou {
+  width: 150px;
+  height: 190px;
+  margin: 0 auto 24px;
+  display: block;
+  transform: rotate(-2.5deg);
+  filter: drop-shadow(0 10px 22px rgba(31, 29, 26, 0.13));
 }
 .erou h1 {
   font-size: clamp(28px, 6vw, 44px);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
 }
 .erou .subtitlu {
@@ -125,24 +180,54 @@ body {
   border-radius: var(--radius-chip);
   padding: 8px 18px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* ===== SECȚIUNI ===== */
-.sectiune { padding: 48px 0; }
+.sectiune { padding: 64px 0; }
 .sectiune h2 {
   font-size: clamp(22px, 4vw, 30px);
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 .sectiune .introducere {
   color: var(--text-secondary);
   max-width: 620px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
-/* ===== FUNCȚII (grid de carduri) ===== */
-.grila-functii {
+/* ===== CUM FUNCȚIONEAZĂ (M4): 3 pași cu numere mari ===== */
+.grila-pasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap-carduri);
+  margin-top: 24px;
+}
+.pas-numar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.pas h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.pas p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* ===== CE ȘTIU SĂ FAC (M4): 3 carduri mari + lista compactă ===== */
+.grila-diferentiatori {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--gap-carduri);
@@ -152,19 +237,92 @@ body {
   border: 1px solid var(--border-card);
   border-radius: var(--radius-card);
   padding: var(--pad-card);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--umbra-hover);
+}
+.card-mare { padding: 24px 20px; }
 .card h3 {
   font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 6px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
-.card h3 .glif { margin-right: 6px; }
+.pictograma {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
 .card p {
   color: var(--text-secondary);
   font-size: 15px;
 }
 
-/* ===== CAPTURI (sloturi pregătite; secțiunea stă ascunsă până vin pozele
+.pe-deasupra { margin-top: 32px; }
+.pe-deasupra h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.lista-compacta {
+  list-style: none;
+  max-width: 720px;
+}
+.lista-compacta li {
+  color: var(--text-secondary);
+  font-size: 15px;
+  padding: 8px 0 8px 22px;
+  position: relative;
+}
+.lista-compacta li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.lista-compacta strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* ===== BANNER DIASPORA (M4): fundal verde pal, fără steaguri ===== */
+.banner-diaspora {
+  background: var(--green-soft);
+  text-align: center;
+  padding: 48px 0;
+}
+.eticheta-diaspora {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.mesaj-diaspora {
+  font-size: clamp(19px, 3.2vw, 25px);
+  font-weight: 700;
+  color: var(--text-primary);
+  max-width: 620px;
+  margin: 0 auto;
+}
+.submesaj-diaspora {
+  margin: 10px auto 0;
+  max-width: 620px;
+  color: var(--green);
+  font-size: 16px;
+}
+
+/* ===== CAPTURI (sloturi pregătite; blocul stă ascuns până vin pozele
    reale de la TEST-REAL — se activează scoțând atributul hidden) ===== */
 .grila-capturi {
   display: grid;
@@ -192,9 +350,14 @@ body {
   border-radius: var(--radius-card);
   padding: var(--pad-card);
   margin-bottom: var(--gap-carduri);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.intrebare:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--umbra-hover);
 }
 .intrebare summary {
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -222,7 +385,7 @@ body {
 
 .legatura {
   color: var(--green);
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
 }
 .legatura:hover { text-decoration: underline; }
@@ -232,12 +395,17 @@ body {
   margin-top: 14px;
   background: var(--green);
   color: #FFFFFF;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   border-radius: var(--radius-buton);
   padding: 13px 26px;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
-.buton-verde:hover { background: var(--green-pressed); }
+.buton-verde:hover {
+  background: var(--green-pressed);
+  transform: translateY(-2px);
+  box-shadow: var(--umbra-hover);
+}
 
 /* ===== FOOTER ===== */
 .subsol {
@@ -255,10 +423,10 @@ body {
 
 /* ===== pagina de confidențialitate ===== */
 .politica { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
-.politica h1 { font-size: 28px; font-weight: 500; margin-bottom: 6px; }
+.politica h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
 .politica .actualizata { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
-.politica h2 { font-size: 20px; font-weight: 500; margin: 28px 0 8px; }
-.politica h3 { font-size: 16.5px; font-weight: 500; margin: 18px 0 6px; }
+.politica h2 { font-size: 20px; font-weight: 700; margin: 28px 0 8px; }
+.politica h3 { font-size: 16.5px; font-weight: 700; margin: 18px 0 6px; }
 .politica p, .politica li { color: var(--text-secondary); font-size: 15px; }
 .politica ul { padding-left: 22px; margin: 8px 0; }
 .politica .separator {
