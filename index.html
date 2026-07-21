@@ -6,8 +6,24 @@
   <title>Cumpătatu — Tu pozezi bonul. Eu țin socoteala.</title>
   <meta name="description" content="Cumpătatu citește bonul, împarte cheltuielile pe categorii și-ți arată unde se duc banii. În română, pentru acasă și pentru diaspora. Fără tracking.">
   <link rel="stylesheet" href="stil.css">
-  <link rel="icon" type="image/png" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cumpătatu">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="Cumpătatu — Tu pozezi bonul. Eu țin socoteala.">
+  <meta property="og:description" content="Cumpătatu citește bonul, împarte cheltuielile pe categorii și-ți arată unde se duc banii. În română, pentru acasă și pentru diaspora.">
+  <meta property="og:url" content="https://cumpatatu.ro/">
+  <meta property="og:image" content="https://cumpatatu.ro/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cumpătatu, furnica gospodină, ține un bon în mână, lângă numele aplicației și sloganul ei.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cumpătatu — Tu pozezi bonul. Eu țin socoteala.">
+  <meta name="twitter:description" content="Cumpătatu citește bonul, împarte cheltuielile pe categorii și-ți arată unde se duc banii.">
+  <meta name="twitter:image" content="https://cumpatatu.ro/og.png">
 </head>
 <body>
 
@@ -42,6 +58,27 @@
     și-ți arată unde se duc banii. În română, pentru acasă și pentru diaspora.</p>
   <span class="insigna-curand">În curând pe iPhone și Android</span>
 </header>
+
+<!-- BADGE BETA (ADENDA S): construit, ASCUNS pana la E8 -- atunci se scoate
+     atributul hidden si se pun link-urile reale (TestFlight / Play testing). -->
+<div id="bloc-beta" hidden>
+  <section class="banner-beta">
+    <div class="invelis banner-beta-rand">
+      <img class="banner-beta-mascota" src="mascota-hero.webp" width="112" height="112"
+           alt="Cumpătatu ține un bon în mână">
+      <div class="banner-beta-text">
+        <span class="eticheta-beta">Beta deschisă</span>
+        <p class="mesaj-beta">Caut primii gospodari care să mă încerce.
+          Locurile sunt numărate — ca banii buni.</p>
+        <div class="banner-beta-butoane">
+          <!-- linkurile reale vin la E8: TestFlight / Google Play closed testing -->
+          <a class="buton-verde" href="#">Vreau pe iPhone</a>
+          <a class="buton-verde" href="#">Vreau pe Android</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
 <svg class="separator-bon" aria-hidden="true" height="18"><rect x="0" y="0" width="100%" height="10" fill="#FFFFFF"/><rect x="0" y="10" width="100%" height="8" fill="url(#zimti)"/></svg>
 
@@ -189,6 +226,8 @@
     <a href="privacy.html">Politica de confidențialitate</a>
     &nbsp;·&nbsp;
     <a href="termeni.html">Termenii perioadei de beta</a>
+    &nbsp;·&nbsp;
+    <a href="stergere-cont.html">Ștergerea contului</a>
   </span>
 </footer>
 

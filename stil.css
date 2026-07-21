@@ -323,6 +323,43 @@ body {
   font-size: 16px;
 }
 
+/* ===== BADGE BETA (ADENDA S): construit, stă ascuns până la E8 —
+   se activează scoțând atributul hidden de pe #bloc-beta ===== */
+.banner-beta {
+  background: var(--green-soft);
+  padding: 36px 0;
+}
+.banner-beta-rand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.banner-beta-mascota { flex: none; }
+.banner-beta-text { max-width: 520px; }
+.eticheta-beta {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.mesaj-beta {
+  font-size: clamp(17px, 2.8vw, 22px);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.banner-beta-butoane {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
 /* ===== CAPTURI (sloturi pregătite; blocul stă ascuns până vin pozele
    reale de la TEST-REAL — se activează scoțând atributul hidden) ===== */
 .grila-capturi {
