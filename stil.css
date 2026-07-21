@@ -151,7 +151,9 @@ body {
 /* ===== HERO ===== */
 .erou {
   text-align: center;
-  padding: 64px 0 56px;
+  /* doar vertical: nu calca padding-ul lateral din .invelis (bug mobil) */
+  padding-top: 64px;
+  padding-bottom: 56px;
 }
 .bon-erou {
   width: 150px;
@@ -184,7 +186,7 @@ body {
 }
 
 /* ===== SECȚIUNI ===== */
-.sectiune { padding: 64px 0; }
+.sectiune { padding-top: 64px; padding-bottom: 64px; }
 .sectiune h2 {
   font-size: clamp(22px, 4vw, 30px);
   font-weight: 700;
@@ -410,7 +412,8 @@ body {
 /* ===== FOOTER ===== */
 .subsol {
   border-top: 1px solid var(--border);
-  padding: 24px 0 40px;
+  padding-top: 24px;
+  padding-bottom: 40px;
   color: var(--text-muted);
   font-size: 14px;
   display: flex;
