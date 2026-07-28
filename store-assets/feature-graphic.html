@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Pipeline grafica de store (E7): compozitie capturata la pixel, 1024x500.
+     Acelasi procedeu ca imaginea OG (S10): tokens din stil.css, Nunito
+     self-hosted din ../fonturi, mascota din ../mascota-hero.webp.
+     Captura: viewport exact 1024x500, scale 1. -->
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<title>Feature graphic 1024x500</title>
+<style>
+  @font-face {
+    font-family: "Nunito";
+    src: url("../fonturi/nunito-latin-ext-700-normal.woff2") format("woff2");
+    font-weight: 700;
+    unicode-range: U+0100-024F;
+  }
+  @font-face {
+    font-family: "Nunito";
+    src: url("../fonturi/nunito-latin-700-normal.woff2") format("woff2");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Nunito";
+    src: url("../fonturi/nunito-latin-ext-500-normal.woff2") format("woff2");
+    font-weight: 500;
+    unicode-range: U+0100-024F;
+  }
+  @font-face {
+    font-family: "Nunito";
+    src: url("../fonturi/nunito-latin-500-normal.woff2") format("woff2");
+    font-weight: 500;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1024px; height: 500px; overflow: hidden; }
+  body {
+    background: #F3F0E8;
+    font-family: "Nunito", sans-serif;
+    position: relative;
+  }
+  .continut {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    padding: 0 72px 36px 72px;
+  }
+  .text { max-width: 520px; }
+  .nume {
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 1.05;
+    color: #2E6A4C;
+    letter-spacing: -1px;
+  }
+  .slogan {
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.3;
+    color: #1F1D1A;
+  }
+  .mascota { flex: none; }
+  .mascota img { display: block; width: 380px; height: 380px; }
+  /* banda zimtata de bon, ca in imaginea OG: dinti albi pe marginea de jos */
+  .banda {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 28px;
+  }
+</style>
+</head>
+<body>
+  <div class="continut">
+    <div class="text">
+      <div class="nume">Cump&#259;tatu</div>
+      <div class="slogan">Tu pozezi bonul.<br>Eu &#539;in socoteala.</div>
+    </div>
+    <div class="mascota"><img src="../mascota-hero.webp" alt=""></div>
+  </div>
+  <svg class="banda" width="1024" height="28" viewBox="0 0 1024 28"
+       preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,28 L0,14 L16,0 L32,14 L48,0 L64,14 L80,0 L96,14 L112,0 L128,14 L144,0 L160,14 L176,0 L192,14 L208,0 L224,14 L240,0 L256,14 L272,0 L288,14 L304,0 L320,14 L336,0 L352,14 L368,0 L384,14 L400,0 L416,14 L432,0 L448,14 L464,0 L480,14 L496,0 L512,14 L528,0 L544,14 L560,0 L576,14 L592,0 L608,14 L624,0 L640,14 L656,0 L672,14 L688,0 L704,14 L720,0 L736,14 L752,0 L768,14 L784,0 L800,14 L816,0 L832,14 L848,0 L864,14 L880,0 L896,14 L912,0 L928,14 L944,0 L960,14 L976,0 L992,14 L1008,0 L1024,14 L1024,28 Z"
+          fill="#FFFFFF"/>
+  </svg>
+</body>
+</html>
